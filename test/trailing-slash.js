@@ -20,7 +20,7 @@ test('should not add trailing slash when showDir and autoIndex are off', (t) => 
     request.get(`http://localhost:${port}/subdir`, (err, res) => {
       t.ifError(err);
       t.equal(res.statusCode, 404);
-      t.equal(res.body, 'File not found. :(');
+      t.equal(res.body, '<h1>404</h1>\n');
     });
   });
 });
